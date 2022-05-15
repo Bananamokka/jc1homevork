@@ -20,4 +20,5 @@ public class Cat {
     public String getCatName() {
         return catName;
     }
+
 }
