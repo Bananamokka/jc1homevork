@@ -42,5 +42,37 @@ public class Lists {
         long result3 = end3 - start3;
         System.out.println("Remove Linked list process: " + result3);
 
+        long start4 = System.currentTimeMillis();
+
+        List<Cat> cats3 = new ArrayList<>(1000000);
+
+        for (int i = 0; i < 1000000; i++) {
+            cats3.add(new Cat());
+        }
+            long end4 = System.currentTimeMillis();
+            long result4 = end4 - start4;
+            System.out.println("Array list1 process: " + result4);
+
+        long start5 = System.currentTimeMillis();
+        cats3.remove(0);
+        long end5 = System.currentTimeMillis();
+        long result5 = end5 - start5;
+        System.out.println("Remove Array list1 process: " + result5);
+
+        long start6 = System.currentTimeMillis();
+        List<Cat> cats4 = new LinkedList<>();
+        for (int i = 0; i < 1000000; i++) {
+            cats4.add(new Cat());
+        }
+        long end6 = System.currentTimeMillis();
+        long result6 = end6 - start6;
+        System.out.println("Linked list1 process: " + result6);
+
+        long start7 = System.currentTimeMillis();
+        cats4.remove(0);
+        long end7 = System.currentTimeMillis();
+        long result7 = end7 - start7;
+        System.out.println("Remove Linked list1 process: " + result7);
+        }
     }
-}
+
