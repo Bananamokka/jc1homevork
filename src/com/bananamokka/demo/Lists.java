@@ -10,8 +10,8 @@ public class Lists {
 
         long start = System.currentTimeMillis();
 
-        List<Cat> cats = new ArrayList<>(100000);
-        CatGenerator.generateCats(100000);
+        List<Cat> cats;
+        cats = CatGenerator.generateCats(100000);
         long end = System.currentTimeMillis();
         long result = end - start;
 
@@ -19,28 +19,28 @@ public class Lists {
 
         long start1 = System.currentTimeMillis();
 
-        LinkedList<Cat> cats1 = new LinkedList<>();
-        CatGenerator.generateCats1(100000);
+        LinkedList<Cat> cats1;
+        cats1 = CatGenerator.generateCats1(100000);
         long end1 = System.currentTimeMillis();
-        long result1 = end - start;
+        long result1 = end1 - start1;
 
-        System.out.println("Linked list process: " + result);
+        System.out.println("Linked list process: " + result1);
 
         long start2 = System.currentTimeMillis();
 
-        cats.remove(new Cat());
+        cats.remove(0);
 
         long end2 = System.currentTimeMillis();
-        long result2 = end - start;
-        System.out.println("Remove Array list process: " + result);
+        long result2 = end2 - start2;
+        System.out.println("Remove Array list process: " + result2);
 
         long start3 = System.currentTimeMillis();
 
-        cats1.remove(new Cat());
+        cats1.remove(0);
 
         long end3 = System.currentTimeMillis();
-        long result3 = end - start;
-        System.out.println("Remove Linked list process: " + result);
+        long result3 = end3 - start3;
+        System.out.println("Remove Linked list process: " + result3);
 
     }
 }
